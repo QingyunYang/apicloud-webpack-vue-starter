@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="A6061054636444" version="0.0.1">
+  <name>demo</name>
+  <description>description</description>
+  <author email="author@xxx.com" href="http://www.apicloud.com">author</author>
+  <content src="index.html"/>
+  <preference name="pageBounce" value="false"/>
+  <preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+  <preference name="windowBackground" value="#fff"/>
+  <preference name="frameBackgroundColor" value="#ebebeb"/>
+  <preference name="hScrollBarEnabled" value="true"/>
+  <preference name="vScrollBarEnabled" value="true"/>
+  <preference name="autoLaunch" value="false"/>
+  <preference name="fullScreen" value="true"/>
+  <preference name="autoUpdate" value="true"/>
+  <preference name="smartUpdate" value="true"/>
+  <preference name="debug" value="true"/>
+  <preference name="statusBarAppearance" value="false"/>
+  <permission name="readPhoneState"/>
+  <permission name="camera"/>
+  <permission name="location"/>
+  <permission name="fileSystem"/>
+  <permission name="internet"/>
+  <permission name="hardware"/>
+  <permission name="call" />
+  <access origin="*"/>
+  <preference name="urlScheme" value="demo" />
+  <preference name="useWKWebView" value="true" />
+  <preference name="interfaceStyle" value="Automatic"/>
+  <preference name="querySchemes" value="weixin,wechat,tbopen,tmall,jdlogin,openapp.jdmobile,pddopen"/>
+</widget>
