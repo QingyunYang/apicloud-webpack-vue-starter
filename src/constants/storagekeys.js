@@ -1,0 +1,1 @@
+export const STATE_USER = 'STATE_USER'

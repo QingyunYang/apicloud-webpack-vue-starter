@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import { isDevelopment, isProduction } from '@/utils/env'
+import store from '@/store'
 import api from '@/utils/api'
 
 Vue.config.productionTip = false
@@ -11,6 +12,7 @@ const mount = component => {
 
   const render = () => {
     new Vue({
+      store,
       render: h => h(component),
     }).$mount('#app')
   }

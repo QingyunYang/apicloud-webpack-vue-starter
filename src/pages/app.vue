@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <span v-if="loginStatus">已登录</span>
+    <span v-else>未登录</span>
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue'
+import { mapState } from 'vuex'
+import HelloWorld from "../components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld
   },
+  computed: {
+    ...mapState({
+      loginStatus: state => state.user.loginStatus
+    })
+  },
   created() {
-    console.log(this.api.ajax);
   }
-}
+};
 </script>
 
 <style>
