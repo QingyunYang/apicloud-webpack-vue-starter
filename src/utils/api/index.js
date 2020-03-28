@@ -1,6 +1,8 @@
-import ajax from './ajax';
+import openWin from './openWin'
+import ajax from './ajax'
 
 const api = {
+  openWin,
   ajax
 }
 

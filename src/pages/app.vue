@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <span v-if="loginStatus">已登录</span>
     <span v-else>未登录</span>
+    <button @click="goLogin">去登录</button>
   </div>
 </template>
 
@@ -22,6 +23,14 @@ export default {
     })
   },
   created() {
+  },
+  methods: {
+    goLogin() {
+      const params = {
+        url: './login.html'
+      }
+      this.api.openWin(params)
+    }
   }
 };
 </script>
