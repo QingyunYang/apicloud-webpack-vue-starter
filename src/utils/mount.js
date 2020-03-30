@@ -1,13 +1,18 @@
 import Vue from 'vue'
-import { isDevelopment, isProduction } from '@/utils/env'
+import { 
+  isH5,
+  isLoader,
+  isNative,
+  isDevelopment
+} from '@/utils/env'
 import store from '@/store'
 
 Vue.config.productionTip = false
 
 const mount = component => {
 
-  console.log(`isDevelopment: ${isDevelopment}`)
-  console.log(`isProduction: ${isProduction}`)
+  console.log(`是否为开发环境: ${isDevelopment || isLoader}`)
+  console.log(`是否为生产环境: ${isH5 || isNative}`)
 
   const render = () => {
     new Vue({
@@ -16,14 +21,14 @@ const mount = component => {
     }).$mount('#app')
   }
   
-  if (isProduction) {
+  if (isLoader || isNative) {
     window.apiready = () => {
       Vue.prototype.api = window.api
       render()
     }
   }
   
-  if (isDevelopment) {
+  if (isDevelopment || isH5) {
     import('@/utils/api').then(module => {
       Vue.prototype.api = module.default
       render()
