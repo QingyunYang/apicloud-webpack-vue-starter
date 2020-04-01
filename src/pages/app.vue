@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
     <span v-if="loginStatus">已登录</span>
     <span v-else>未登录</span>
     <button @click="goLogin">去登录</button>
@@ -10,12 +8,10 @@
 
 <script>
 import { mapState } from 'vuex'
-import HelloWorld from "../components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
   },
   computed: {
     ...mapState({
