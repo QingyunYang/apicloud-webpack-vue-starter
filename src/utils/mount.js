@@ -4,7 +4,7 @@ import {
   isLoader,
   isNative,
   isDevelopment
-} from '@/utils/env'
+} from '@/utils'
 import store from '@/store'
 
 Vue.config.productionTip = false
