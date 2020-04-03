@@ -1,17 +1,28 @@
 <template>
-  <div id="app">
-    <span v-if="loginStatus">已登录</span>
-    <span v-else>未登录</span>
-    <button @click="goLogin">去登录</button>
+  <div id="index">
+    <van-panel title="登录状态">
+      <span v-if="loginStatus" class="status">已登录</span>
+      <span v-else class="status">未登录</span>
+      <template #footer>
+        <van-button
+          size="small"
+          type="primary"
+          @click="goLogin"
+        >打开登录页</van-button>
+      </template>
+    </van-panel>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import { Panel, Button } from 'vant'
 
 export default {
   name: "App",
   components: {
+    vanPanel: Panel,
+    vanButton: Button
   },
   computed: {
     ...mapState({
@@ -29,16 +40,29 @@ export default {
       this.api.openWin(params)
     }
   }
-};
+}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang='less' scoped>
+@import '../assets/less/var.less';
+
+#index {
+
+  .van-panel__content {
+    padding: @padding-md;
+    text-align: center;
+
+    .status {
+      font-size: @font-size-md;
+    }
+  }
+  
+  .van-panel__footer {
+    text-align: right;
+
+    .van-button {
+      margin-left: @margin-xs;
+    }
+  }
 }
 </style>

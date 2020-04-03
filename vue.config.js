@@ -33,13 +33,23 @@ const getPostcssPlugins = scheme => {
 
   if (scheme === 'vw') {
     plugins.push(
-      pxtoviewport({ viewportWidth: 375 })
+      pxtoviewport({
+        viewportWidth: 375
+      })
     )
   } else if (scheme === 'rem') {
+    // rem适配方案
+    // 需要在html根节点添加font-size样式
     plugins.push(
       pxtorem({
-        rootValue: 75,
-        propList: ['*']
+        rootValue: 16,
+        unitPrecision: 5,
+        selectorBlackList: [],
+        propList: ["font", "font-size", "line-height", "letter-spacing"],
+        replace: true,
+        mediaQuery: false,
+        minPixelValue: 0,
+        exclude: null
       })
     )
   }
@@ -62,7 +72,7 @@ module.exports = {
   css: {
     loaderOptions: {
       postcss: {
-        plugins: getPostcssPlugins('rem')
+        plugins: getPostcssPlugins('vw')
       }
     }
   },

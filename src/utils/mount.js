@@ -6,6 +6,7 @@ import {
   isChrome
 } from '@/utils'
 import store from '@/store'
+import '@/assets/less/global.less'
 
 Vue.config.productionTip = false
 
