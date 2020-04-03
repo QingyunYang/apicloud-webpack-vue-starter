@@ -10,7 +10,7 @@
   <preference name="frameBackgroundColor" value="#ebebeb"/>
   <preference name="hScrollBarEnabled" value="true"/>
   <preference name="vScrollBarEnabled" value="true"/>
-  <preference name="autoLaunch" value="false"/>
+  <preference name="autoLaunch" value="true"/>
   <preference name="fullScreen" value="true"/>
   <preference name="autoUpdate" value="true"/>
   <preference name="smartUpdate" value="true"/>

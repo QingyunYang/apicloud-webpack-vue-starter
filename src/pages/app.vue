@@ -23,7 +23,8 @@ export default {
   methods: {
     goLogin() {
       const params = {
-        url: './login.html'
+        name: 'login',
+        url: 'login.html'
       }
       this.api.openWin(params)
     }
