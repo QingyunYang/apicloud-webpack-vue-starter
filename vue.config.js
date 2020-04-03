@@ -47,10 +47,21 @@ const getPostcssPlugins = scheme => {
   return plugins
 }
 
+const getPublicPath = () => {
+  console.log(process.env.NODE_ENV)
+  console.log(process.env.VUE_APP_CLIENT)
+
+  if (process.env.VUE_APP_CLIENT === 'h5') return '/'
+  if (process.env.VUE_APP_CLIENT === 'chrome') return '/'
+
+  if (process.env.VUE_APP_CLIENT === 'native') return './'
+  if (process.env.VUE_APP_CLIENT === 'loader') return '/'
+}
+
 module.exports = {
   pages: getPagesConfig(),
   assetsDir: 'static',
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  publicPath: getPublicPath(),
   css: {
     loaderOptions: {
       postcss: {

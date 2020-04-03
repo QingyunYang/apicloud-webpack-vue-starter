@@ -2,7 +2,7 @@ import {
   isH5,
   isLoader,
   isNative,
-  isDevelopment
+  isChrome
 } from './env'
 
 export { default as api } from './api'
@@ -11,5 +11,5 @@ export {
   isH5,
   isLoader,
   isNative,
-  isDevelopment
+  isChrome
 }

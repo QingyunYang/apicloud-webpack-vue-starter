@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --mode chrome",
     "serve:loader": "vue-cli-service serve --mode loader",
     "build:h5": "vue-cli-service build --mode h5",
     "build:native": "vue-cli-service build --mode native",
