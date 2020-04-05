@@ -1,68 +1,34 @@
 <template>
   <div id="index">
-    <van-panel title="登录状态">
-      <span v-if="loginStatus" class="status">已登录</span>
-      <span v-else class="status">未登录</span>
-      <template #footer>
-        <van-button
-          size="small"
-          type="primary"
-          @click="goLogin"
-        >打开登录页</van-button>
-      </template>
-    </van-panel>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
+    <van-tabbar route>
+      <van-tabbar-item to='/home' icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item to='/mine' icon="setting-o">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { Panel, Button } from 'vant'
+import { Tabbar, TabbarItem } from 'vant'
 
 export default {
   name: "App",
   components: {
-    vanPanel: Panel,
-    vanButton: Button
+    vanTabbar: Tabbar,
+    vanTabbarItem: TabbarItem
   },
-  computed: {
-    ...mapState({
-      loginStatus: state => state.user.loginStatus
-    })
+  data() {
+    return {
+    }
   },
   created() {
   },
   methods: {
-    goLogin() {
-      const params = {
-        name: 'login',
-        url: 'login.html'
-      }
-      this.api.openWin(params)
-    }
   }
 }
 </script>
 
 <style lang='less' scoped>
-@import '../assets/less/var.less';
-
-#index {
-
-  .van-panel__content {
-    padding: @padding-md;
-    text-align: center;
-
-    .status {
-      font-size: @font-size-md;
-    }
-  }
-  
-  .van-panel__footer {
-    text-align: right;
-
-    .van-button {
-      margin-left: @margin-xs;
-    }
-  }
-}
 </style>
