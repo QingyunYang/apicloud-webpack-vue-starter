@@ -14,6 +14,7 @@
 - 使用chrome调试业务代码
 - 脱离apicloud-studio真机调试
 - 多环境开发
+- 集成移动端调试工具eruda
 
 ### Getting Started
 
