@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode chrome",
-    "serve:loader": "vue-cli-service serve --mode loader",
+    "dev": "vue-cli-service serve --mode chrome",
+    "dev:loader": "vue-cli-service serve --mode loader",
     "build:h5": "vue-cli-service build --mode h5",
     "build:native": "vue-cli-service build --mode native",
     "lint": "vue-cli-service lint",
@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "eruda": "^2.3.3",
     "qs": "^6.9.3",
     "querystringify": "^2.1.1",
     "store2": "^2.11.0",

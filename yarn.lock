@@ -3147,6 +3147,11 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.1.1"
 
+eruda@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.npm.taobao.org/eruda/download/eruda-2.3.3.tgz#d976943b96e4d4f9d786fb9773180b9fe1a17305"
+  integrity sha1-2XaUO5bk1PnXhvuXcxgLn+GhcwU=
+
 es-abstract@^1.17.0-next.1, es-abstract@^1.17.2:
   version "1.17.5"
   resolved "https://registry.npm.taobao.org/es-abstract/download/es-abstract-1.17.5.tgz?cache=0&sync_timestamp=1584908910574&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fes-abstract%2Fdownload%2Fes-abstract-1.17.5.tgz#d8c9d1d66c8981fb9200e2251d799eee92774ae9"
