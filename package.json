@@ -13,7 +13,7 @@
     "log": "apicloud wifiLog --port 8686"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "eruda": "^2.3.3",
     "qs": "^6.9.3",
